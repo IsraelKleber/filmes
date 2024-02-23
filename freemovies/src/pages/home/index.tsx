@@ -12,7 +12,7 @@ function Home() {
 
   function handleMovies(): void {
     void movieService
-      .getMoviePopularList()
+      .getMoviesPopularList()
       .then((response) => {
         setMovies(response.results);
         console.log("Filmes", response);
