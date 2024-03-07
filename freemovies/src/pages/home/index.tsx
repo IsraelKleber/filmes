@@ -1,22 +1,7 @@
 import { useEffect, useState } from "react";
 import movieService from "../../service/api/movieService";
-
-interface Movie {
-  adult: boolean;
-  backdrop_path: string;
-  genre_ids: number[];
-  id: number;
-  original_language: string;
-  original_title: string;
-  overview: string;
-  popularity: number;
-  poster_path: string;
-  release_date: string;
-  title: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
-}
+import { Movie } from "@/interface/CardMovieInterface";
+import CardMovie from "@/components/cardMovie";
 
 function Home() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -27,7 +12,7 @@ function Home() {
 
   function handleMovies(): void {
     void movieService
-      .getMoviePopularList()
+      .getMoviesPopularList()
       .then((response) => {
         setMovies(response.results);
         console.log("Filmes", response);
@@ -39,16 +24,10 @@ function Home() {
 
   return (
     <>
-      <h1 className="text-2xl font-bold underline">Filmes</h1>
-      {movies.map((movie) => (
-        <div key={movie.id}>
-          <h2>{movie.title}</h2>
-          <img
-            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-            alt={movie.title}
-          />
-        </div>
-      ))}
+      <h1 className="text-2xl font-bold flex justify-center">
+        Filmes populares
+      </h1>
+      <CardMovie movies={movies} className="flex flex-wrap justify-center" />
     </>
   );
 }
