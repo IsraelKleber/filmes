@@ -20,7 +20,7 @@ jobs:
 
     - name: instalação de dependências
       run: | 
-        cd filmes/freemovies/
+        cd freemovies/
         npm install
 
     - name: Execução do projeto 
