@@ -24,5 +24,7 @@ jobs:
         npm install
 
     - name: Build do projeto 
-      run: npm run build
+      run: | 
+        cd freemovies
+        npm run build
 
