@@ -23,6 +23,6 @@ jobs:
         cd freemovies
         npm install
 
-    - name: Execução do projeto 
-      run: npm run dev
+    - name: Build do projeto 
+      run: npm run build
 
