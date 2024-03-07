@@ -19,7 +19,9 @@ jobs:
         node-version: 20
 
     - name: instalação de dependências
-      run: npm install
+      run: | 
+        cd filmes/freemovies/
+        npm install
 
     - name: Execução do projeto 
       run: npm run dev
