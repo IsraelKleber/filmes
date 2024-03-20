@@ -33,5 +33,5 @@ pnpm install
 #### 2.5. Execute a aplicação:
 
 ```
-npm dev
+npm run dev
 ```
