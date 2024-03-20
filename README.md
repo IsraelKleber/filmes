@@ -27,7 +27,7 @@ cd filmes/freemovies/
 #### 2.3. Instale as dependências:
 
 ```
-pnpm install
+npm install
 ```
 
 #### 2.5. Execute a aplicação:
