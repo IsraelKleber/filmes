@@ -15,13 +15,13 @@ Esta é uma aplicação web criada com React/Vite para fins acadêmicos. A aplic
 #### 2.1. Clone o repositório:
 
 ```
-git clone https://github.com/alcides07/pipoca.git
+git clone https://github.com/IsraelKleber/filmes.git
 ```
 
 #### 2.2. Acesse o diretório gerado:
 
 ```
-cd pipoca/frontend/
+cd filmes/freemovies/
 ```
 
 #### 2.3. Instale as dependências:
