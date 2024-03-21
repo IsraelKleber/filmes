@@ -63,15 +63,17 @@ function MovieDetails() {
   }, []);
 
   async function handleMovieDetails() {
-    void (await movieService
-      .getMovieDetails(id)
-      .then((response) => {
-        setMovie(response);
-        console.log("Filmes", response);
-      })
-      .catch((error) => {
-        console.log("Erro", error);
-      }));
+    if(id){
+      void (await movieService
+        .getMovieDetails(id)
+        .then((response) => {
+          setMovie(response);
+          console.log("Filmes", response);
+        })
+        .catch((error) => {
+          console.log("Erro", error);
+        }));
+      }
   }
 
   return (
