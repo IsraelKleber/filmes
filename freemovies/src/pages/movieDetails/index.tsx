@@ -57,11 +57,9 @@ interface MovieDetails {
 function MovieDetails() {
   const { id } = useParams<string>();
   const [movie, setMovie] = useState<MovieDetails>();
-  const [videos, setVideos] = useState<any>();
 
   useEffect(() => {
     handleMovieDetails();
-    handleMovieVideos();
   }, []);
 
   async function handleMovieDetails() {
@@ -70,18 +68,6 @@ function MovieDetails() {
       .then((response) => {
         setMovie(response);
         console.log("Filmes", response);
-      })
-      .catch((error) => {
-        console.log("Erro", error);
-      }));
-  }
-
-  async function handleMovieVideos() {
-    void (await movieService
-      .getMovieVideos(movie?.imdb_id)
-      .then((response) => {
-        setVideos(response);
-        console.log("Videos", response);
       })
       .catch((error) => {
         console.log("Erro", error);
