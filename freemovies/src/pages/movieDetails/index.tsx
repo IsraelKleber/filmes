@@ -64,7 +64,7 @@ function MovieDetails() {
 
   async function handleMovieDetails() {
     if(id){
-      void (await movieService
+      await movieService
         .getMovieDetails(id)
         .then((response) => {
           setMovie(response);
@@ -72,7 +72,7 @@ function MovieDetails() {
         })
         .catch((error) => {
           console.log("Erro", error);
-        }));
+        });
       }
   }
 
