@@ -77,7 +77,6 @@ function MovieDetails() {
   }
 
   return (
-    <>
       <div className="grid grid-cols-4 w-full h-[350px] bg-slate-600 items-center">
         <div></div> {/* Primeira parte do grid */}
         {movie && (
@@ -117,7 +116,6 @@ function MovieDetails() {
         </div>
         <div></div> {/* Quarta parte do grid */}
       </div>
-    </>
   );
 }
 
