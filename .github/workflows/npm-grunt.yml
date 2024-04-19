@@ -26,7 +26,7 @@ jobs:
     - name: Prettier 
       run: | 
         cd freemovies
-        npm prettier . --check
+        npx prettier . --check
 
     - name: Build do projeto 
       run: | 
