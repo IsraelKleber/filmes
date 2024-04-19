@@ -23,6 +23,11 @@ jobs:
         cd freemovies
         npm install
 
+    - name: Prettier 
+      run: | 
+        cd freemovies
+        npm prettier . --check
+
     - name: Build do projeto 
       run: | 
         cd freemovies
