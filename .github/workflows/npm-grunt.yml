@@ -22,6 +22,16 @@ jobs:
       run: | 
         cd freemovies
         npm install
+        
+    - name: instalação do jscpd
+      run: | 
+        cd freemovies
+        npm install -g jscpd
+
+    - name: execução do jscpd
+      run: | 
+        cd freemovies
+        npx jscpd "./src"
 
     - name: Prettier 
       run: | 
