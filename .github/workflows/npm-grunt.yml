@@ -31,12 +31,7 @@ jobs:
     - name: execução do jscpd
       run: | 
         cd freemovies
-        output=$(npx jscpd "./src")
-        echo "$output"
-        if [[ $output == *"Found "* ]]; then
-          echo "Código duplicado encontrado"
-          exit 1
-        fi
+        npx jscpd --exitCode 1 .
 
     - name: Prettier 
       run: | 
@@ -47,4 +42,3 @@ jobs:
       run: | 
         cd freemovies
         npm run build
-
