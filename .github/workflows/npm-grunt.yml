@@ -31,9 +31,10 @@ jobs:
     - name: execução do jscpd
       run: | 
         cd freemovies
-        npx jscpd "./src"
-        if [ $? -ne 0 ]; then
-          echo "Código duplicado encontrado!"
+        output=$(npx jscpd "./src")
+        echo "$output"
+        if [[ $output == *"Found "* ]]; then
+          echo "Código duplicado encontrado"
           exit 1
         fi
 
