@@ -32,6 +32,10 @@ jobs:
       run: | 
         cd freemovies
         npx jscpd "./src"
+        if [ $? -ne 0 ]; then
+          echo "Código duplicado encontrado!"
+          exit 1
+        fi
 
     - name: Prettier 
       run: | 
