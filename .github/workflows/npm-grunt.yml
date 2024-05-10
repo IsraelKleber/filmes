@@ -22,6 +22,11 @@ jobs:
       run: | 
         cd freemovies
         npm install
+
+    - name: Run ESLint with security plugin
+      run: |
+        cd freemovies
+        npm run lint
         
     - name: instalação do jscpd
       run: | 
