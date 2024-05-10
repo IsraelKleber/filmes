@@ -24,7 +24,7 @@ jobs:
         npm install
 
     - name: Run ESLint with security plugin
-      run: npx lint --ext ts,tsx --report-unused-disable-directives
+      run: npx eslint **/**.tsx
         
     - name: instalação do jscpd
       run: | 
