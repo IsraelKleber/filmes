@@ -30,7 +30,7 @@ jobs:
 
     - name: execução do jscpd
       run: | 
-        cd freemovies
+        cd freemovies/src/
         npx jscpd --exitCode 1 .
 
     - name: Prettier 
