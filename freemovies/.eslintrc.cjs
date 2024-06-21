@@ -19,7 +19,6 @@ module.exports = {
 		"react-refresh/only-export-components": "off",
 		"react-hooks/exhaustive-deps": "off",
 		"import/no-duplicates": "warn",
-		"react/no-typos": "warn",
 		"no-duplicate-case": "warn",	
 	},
 };
