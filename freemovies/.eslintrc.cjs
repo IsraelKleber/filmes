@@ -8,7 +8,7 @@ module.exports = {
 	],
 	ignorePatterns: ["dist", ".eslintrc.cjs"],
 	parser: "@typescript-eslint/parser",
-	plugins: ["react-refresh", "security"],
+	plugins: ["react-refresh", "security", "import"],
 	rules: {
 		"react-refresh/only-export-components": [
 			"warn",
@@ -18,5 +18,7 @@ module.exports = {
 		"security/detect-buffer-noassert": "warn",
 		"react-refresh/only-export-components": "off",
 		"react-hooks/exhaustive-deps": "off",
+		"import/no-duplicates": "warn",
+		"no-duplicate-case": "warn",
 	},
 };
