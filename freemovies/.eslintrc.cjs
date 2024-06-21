@@ -19,6 +19,6 @@ module.exports = {
 		"react-refresh/only-export-components": "off",
 		"react-hooks/exhaustive-deps": "off",
 		"import/no-duplicates": "warn",
-		"no-duplicate-case": "warn",	
+		"no-duplicate-case": "warn",
 	},
 };
